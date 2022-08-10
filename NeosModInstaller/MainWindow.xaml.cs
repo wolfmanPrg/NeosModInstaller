@@ -102,7 +102,7 @@ namespace NeosModInstaller
         private void ModsTab_Loaded(object sender, RoutedEventArgs e)
         {
             WebClient wc = new WebClient();
-            wc.DownloadFile("https://raw.githubusercontent.com/neos-modding-group/neos-mod-manifest/master/manifest.json", @".\neos-mod-manifest.json");
+            wc.DownloadFile("https://raw.githubusercontent.com/wolfmanPrg/neos-mod-manifest/master/manifest.json", @".\neos-mod-manifest.json");
             wc.Dispose();
 
             string json = "";
