@@ -320,7 +320,6 @@ namespace NeosModInstaller
             {
                 p = new ProcessStartInfo()
                 {
-                    FileName = NeosInstallPath + "Neos.exe",
                     Arguments = _LoadAssemblyOpts + _SteamVR
                 };
             }
@@ -328,7 +327,6 @@ namespace NeosModInstaller
             {
                 p = new ProcessStartInfo()
                 {
-                    FileName = NeosInstallPath + "Neos.exe",
                     Arguments = _LoadAssemblyOpts + _RiftTouch
                 };
             }
@@ -336,10 +334,11 @@ namespace NeosModInstaller
             {
                 p = new ProcessStartInfo()
                 {
-                    FileName = NeosInstallPath + "Neos.exe",
                     Arguments = _LoadAssemblyOpts + _Screen
                 };
             }
+            p.FileName = NeosInstallPath + "Neos.exe";
+            p.WorkingDirectory = NeosInstallPath;
 
             Process.Start(p);
         }
@@ -393,7 +392,6 @@ namespace NeosModInstaller
             {
                 p = new ProcessStartInfo()
                 {
-                    FileName = NeosInstallPath + "Neos.exe",
                     Arguments = _SteamVR
                 };
             }
@@ -401,7 +399,6 @@ namespace NeosModInstaller
             {
                 p = new ProcessStartInfo()
                 {
-                    FileName = NeosInstallPath + "Neos.exe",
                     Arguments = _RiftTouch
                 };
             }
@@ -409,10 +406,11 @@ namespace NeosModInstaller
             {
                 p = new ProcessStartInfo()
                 {
-                    FileName = NeosInstallPath + "Neos.exe",
                     Arguments = _Screen
                 };
             }
+            p.FileName = NeosInstallPath + "Neos.exe";
+            p.WorkingDirectory = NeosInstallPath;
 
             Process.Start(p);
         }
